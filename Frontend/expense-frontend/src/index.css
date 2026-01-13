@@ -698,4 +698,31 @@ small {
   50% {
     opacity: .5;
   }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Dark Mode Overrides for Form Visibility */
+.dark .btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.dark .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.dark input[type="number"]::-webkit-inner-spin-button,
+.dark input[type="number"]::-webkit-outer-spin-button {
+  filter: invert(1);
+  opacity: 1;
+  /* Ensure they are not transparent */
 }

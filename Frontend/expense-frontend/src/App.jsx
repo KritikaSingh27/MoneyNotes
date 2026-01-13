@@ -356,40 +356,38 @@ function App() {
       <SignedOut>
         <div className="landing-page">
           <nav className="landing-nav">
-            <div>
-              <div className="logo">Money<span>Notes</span></div>
-              <div className="punchline">A quiet place to understand your spending</div>
+            <div className="logo">
+              Money<span>Notes</span>
             </div>
             <SignInButton mode="modal">
               <button className="nav-login-btn">Sign In</button>
             </SignInButton>
           </nav>
+
           <header className="hero-section">
             <div className="hero-content">
               <div className="badge">New: Gemini 2.5 Insights and Categorization Live</div>
-              <h1>Master your money with <span>AI intelligence.</span></h1>
-              <p>Track expenses, categorize automatically, and get personalized financial advice powered by Google Gemini.</p>
+              <h1>
+                Master your money with <span>AI intelligence.</span>
+              </h1>
+              <p>
+                Track expenses, categorize automatically, and get personalized financial advice powered by Google Gemini.
+              </p>
 
               <div className="hero-actions">
                 <SignInButton mode="modal">
                   <button className="cta-button">Start Tracking for Free</button>
                 </SignInButton>
-                <div className="trust-badges">
-                  <span className="trust-item">✓ Secure Auth by Clerk</span>
-                  <span className="trust-item">✓ Private & Encrypted</span>
-                </div>
               </div>
             </div>
 
             <div className="hero-visual">
               <div className="abstract-card main-card">
                 <div className="skeleton-line short"></div>
-                <div className="skeleton-value"></div>
+                <div className="skeleton-value">$1,234.56</div>
                 <div className="skeleton-line long"></div>
               </div>
               <div className="abstract-card mini-card">
-                <div className="ai-pulse-small"></div>
-                <div className="skeleton-line medium"></div>
               </div>
             </div>
           </header>
