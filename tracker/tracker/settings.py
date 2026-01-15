@@ -9,13 +9,19 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+import pymysql
 
 from pathlib import Path
+
+import dj_database_url
 
 import os
 from dotenv import load_dotenv
 
 from corsheaders.defaults import default_headers
+
+pymysql.version_info = (2, 2, 1, 'final', 0) 
+pymysql.install_as_MySQLdb()
 
 load_dotenv()
 
@@ -105,6 +111,17 @@ DATABASES = {
     }
 }
 
+if os.getenv('DATABASE_URL'):
+    db_config = dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        engine='django.db.backends.mysql',
+        conn_max_age=600,
+    )
+
+    if 'OPTIONS' in db_config and 'ssl-mode' in db_config['OPTIONS']:
+        del db_config['OPTIONS']['ssl-mode']
+        
+    DATABASES['default'] = db_config
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

@@ -93,7 +93,7 @@ class ExpenseViewSet(BaseClerkViewSet):
         # Save the expense
         expense = serializer.save(user_id=clerk_id)
 
-        # 1. Handle manual category assignment (Priority)
+        #Handle manual category assignment
         category_name = self.request.data.get('category_name')
         if category_name and category_name.strip():
             category, _ = Category.objects.get_or_create(
@@ -104,7 +104,7 @@ class ExpenseViewSet(BaseClerkViewSet):
             expense.category_name = category.name
             expense.save(update_fields=["category"]) # Not strictly needed if we save again, but good for clarity of intent
 
-        # 2. AI Auto-categorization (Fallback if no category)
+        # AI Auto-categorization
         elif expense.description and not expense.category:
             try:
                 suggestion = suggest_category(
