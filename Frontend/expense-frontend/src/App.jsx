@@ -358,6 +358,7 @@ function App() {
           <nav className="landing-nav">
             <div className="logo">
               Money<span>Notes</span>
+              <div className="punchline">A quiet place to understand your spending.</div>
             </div>
             <SignInButton mode="modal">
               <button className="nav-login-btn">Sign In</button>
