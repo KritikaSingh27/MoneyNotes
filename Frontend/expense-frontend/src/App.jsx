@@ -366,7 +366,7 @@ function App() {
 
           <header className="hero-section">
             <div className="hero-content">
-              <div className="badge">New: Gemini 2.5 Insights and Categorization Live</div>
+              <div className="badge">New: Gemini Insights and Categorization Live</div>
               <h1>
                 Master your money with <span>AI intelligence.</span>
               </h1>
@@ -376,7 +376,7 @@ function App() {
 
               <div className="hero-actions">
                 <SignInButton mode="modal">
-                  <button className="cta-button">Start Tracking for Free</button>
+                  <button className="cta-button"> Start Tracking </button>
                 </SignInButton>
               </div>
             </div>
@@ -384,7 +384,7 @@ function App() {
             <div className="hero-visual">
               <div className="abstract-card main-card">
                 <div className="skeleton-line short"></div>
-                <div className="skeleton-value">$1,234.56</div>
+                <div className="skeleton-value"> </div>
                 <div className="skeleton-line long"></div>
               </div>
               <div className="abstract-card mini-card">
